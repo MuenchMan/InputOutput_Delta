@@ -1,0 +1,2 @@
+README - Delta on Github by Christian Münch
+This is a piece of generative art written in processing. It experiments with pattern creation by unifying multiple sources over a randomly generated array of nodes. Feel free to share / comment / alter. Have fun!

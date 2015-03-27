@@ -1,3 +1,9 @@
+// a piece of generative Art called Delta
+// author: @MuenchMan
+// license: The MIT License (MIT)
+// created during a course on the University of Applied Science Potsdam
+// many thanks to @fabiantheblind for sharing his knowledge!
+
 int screenWidth = 500;
 int screenHeight = 500;
 int screenMiddleX = screenWidth/2;
@@ -47,8 +53,14 @@ Point[] points = new Point[numPoints];   // declares and creates array
 void setup() {    // setup-area -------------------
   // printArray (points);
   size (screenWidth, screenHeight);
-  noLoop();  // stops draw-looping
+  noLoop();  // stops draw-looping - COMMENT - if you want to save images
   background(20);
+} // setup end bracket
+
+
+void draw() {    // draw-area -------------------
+
+  background(20);  // clears the screen from previous image
 
   //  creates half of the  points in the upper half of the screen
   for (int i=0; i<numPoints/2; i++) {             
@@ -87,7 +99,7 @@ void setup() {    // setup-area -------------------
     points[i] = new Point(randomX, randomY); // creates a Point object within the points array with the calculated position
   }
 
-  int lineCounter = 1000 ;  // change for number of lines  -  !INTERESTING!
+  int lineCounter = 600 ;  // change for number of lines  -  !INTERESTING!
   for (int e = 0; e < lineCounter; e++) {  
     float startPosX = random(0, screenWidth); //random start x position
     float startPosY = 0;
@@ -118,9 +130,8 @@ void setup() {    // setup-area -------------------
       println(lastPosX);
     }
   }
-} // setup end bracket
 
-
-void draw() {    // draw-area -------------------
+  // Saves each frame as line-000001.png, line-000002.png, etc.
+  // saveFrame("line-######.png"); // UNCOMMENT - if you want to save images
 } // draw end bracket
 
