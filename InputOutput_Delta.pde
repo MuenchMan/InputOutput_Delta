@@ -123,6 +123,7 @@ void draw() {    // draw-area -------------------
       }
       stroke(255, 250, 250, 5); // line color
       strokeWeight(1);  // line thickness
+      //blendMode(ADD);
       line(lastPosX, lastPosY, newPosX, newPosY); // draws the line
       lastPosX = newPosX;
       lastPosY = newPosY;
@@ -134,4 +135,3 @@ void draw() {    // draw-area -------------------
   // Saves each frame as line-000001.png, line-000002.png, etc.
   // saveFrame("line-######.png"); // UNCOMMENT - if you want to save images
 } // draw end bracket
-
